@@ -1,0 +1,1 @@
+$("body").on("click",".ui-logout-button",(function(o){o.preventDefault(),$.post({url:logoutEndpoint,processData:!1,contentType:!1,success:function(o){o.success&&($("#ui-login-form-username").val(""),$("#ui-login-form-password").val(""),loadLoginPage(""),window.history.pushState({additionalInformation:"Updated the URL with JS"},"","../../../../../../login"))}})}));
